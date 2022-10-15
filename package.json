@@ -34,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@aws-amplify/cli": "^10.2.3",
+    "@aws-amplify/ui-react": "^3.5.7",
+    "aws-amplify": "^4.3.37",
+    "cypress": "^10.10.0"
   }
 }
