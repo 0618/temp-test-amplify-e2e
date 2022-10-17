@@ -36,7 +36,7 @@ frontend:
         - nvm use 16
         - node -v
     artifacts:
-      baseDirectory: .frontend
+      baseDirectory: ./
       files:
         - '**/*.png'
         - '**/*.mp4'
