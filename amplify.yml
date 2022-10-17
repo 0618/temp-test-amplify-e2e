@@ -23,20 +23,16 @@ test:
       - '**/*.mp4'
 frontend:
   phases:
-    prebuild: 
-      commands: 
-        - rm -rf node_modules
-        - nvm install 16.13
-        - nvm use 16
-        - node -v
-        - npm run build
+    preBuild:
+      commands:
+        - yarn install
     build:
       commands:
-        - nvm install 16.13
-        - nvm use 16
-        - node -v
-    artifacts:
-      baseDirectory: build
-      files:
-        - '**/*.png'
-        - '**/*.mp4'
+        - yarn run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
