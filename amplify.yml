@@ -21,3 +21,22 @@ test:
     files:
       - '**/*.png'
       - '**/*.mp4'
+frontend:
+  phases:
+    prebuild: 
+      commands: 
+        - rm -rf node_modules
+        - nvm install 16.13
+        - nvm use 16
+        - node -v
+        - npm run build
+    build:
+      commands:
+        - nvm install 16.13
+        - nvm use 16
+        - node -v
+    artifacts:
+      baseDirectory: .frontend
+      files:
+        - '**/*.png'
+        - '**/*.mp4'
